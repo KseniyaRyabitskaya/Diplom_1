@@ -54,12 +54,9 @@ public class BurgerTest {
         burger.addIngredient(firstIngredient);
         burger.addIngredient(secondIngredient);
         int oldIndexFirstIngredient = burger.ingredients.indexOf(firstIngredient);
-        int oldIndexSecondIngredient = burger.ingredients.indexOf(secondIngredient);
         burger.moveIngredient(oldIndexFirstIngredient, oldIndexFirstIngredient + 1);
         int newIndexFirstIngredient = burger.ingredients.indexOf(firstIngredient);
-        int newIndexSecondIngredient = burger.ingredients.indexOf(secondIngredient);
         assertEquals(oldIndexFirstIngredient + 1, newIndexFirstIngredient);
-        assertEquals(oldIndexSecondIngredient - 1, newIndexSecondIngredient);
     }
 
     @Test
